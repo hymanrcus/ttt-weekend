@@ -2,7 +2,7 @@
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-let board, turn , isWinner
+let board, turn, winner
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -23,6 +23,15 @@ console.log(messageEl)
 init ()
 
 function init() {
-
+  let board = [null, null, null, null, null, null, null, null, null,]
+  let turn = 1
+  let Winner = null
+  render ()
 }
-console.log(init)
+// console.log(init)
+
+
+function render() {
+  board.forEach(board)
+}
+console.log(board)
