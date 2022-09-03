@@ -1,13 +1,14 @@
 /*-------------------------------- Constants --------------------------------*/
 
+const squareEls = document.querySelector("block")
+const messageEl = document.querySelector("#message")
+
 /*---------------------------- Variables (state) ----------------------------*/
 
 let board, turn, winner
 
 /*------------------------ Cached Element References ------------------------*/
 
-const squareEls = document.querySelector("block")
-const messageEl = document.querySelector("#message")
 //// const section = document.quertSelector("board")
 //// const = document.quertSelector("")
 console.log(squareEls)
@@ -32,6 +33,20 @@ function init() {
 
 
 function render() {
-  board.forEach(board)
+  board.forEach(function(value, index) {
+    if (value === 1) { 
+      squareEls[index].innnerText = " X "
+    } else if (value === -1) {
+      squareEls[index].innnerText = " O "
+    } else (value === null)
+      squareEls[index].innnerText + " "
 }
-console.log(board)
+
+    if (winner === null) {
+      messageEl.textContent = "It is Player ${turn}'s turn."
+  } else if (winner === 'T') {
+    messageEl.textContent = "The game is a tie!"
+  } else {
+    messageEl.textContent = "Congrats! Player ${winner} is the winner!"
+  }
+}
