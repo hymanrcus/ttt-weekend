@@ -2,6 +2,16 @@
 
 const squareEls = document.querySelector("block")
 const messageEl = document.querySelector("#message")
+const wiiningCombos = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+]
 
 /*---------------------------- Variables (state) ----------------------------*/
 
@@ -11,13 +21,13 @@ let board, turn, winner
 
 //// const section = document.quertSelector("board")
 //// const = document.quertSelector("")
-console.log(squareEls)
-console.log(messageEl)
+// console.log(squareEls)
+// console.log(messageEl)
+let gameBoard = document.querySelector("seciton")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
-
-
+gameBoard.addEventListener('click',handleClick)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -49,4 +59,8 @@ function render() {
   } else {
     messageEl.textContent = "Congrats! Player ${winner} is the winner!"
   }
+}
+
+function handleClick(event) {
+const sqIdx
 }
